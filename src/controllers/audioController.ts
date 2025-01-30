@@ -9,5 +9,14 @@ class AudioController {
         res.send("Text extracted from audio file.");
     }
 }
+class DogNameGenerator {
+    private dogNames: string[] = ["Buddy", "Bella", "Charlie", "Max", "Lucy", "Molly", "Daisy", "Bailey", "Lola", "Sadie"];
+
+    generateRandomName(): string {
+        const randomIndex = Math.floor(Math.random() * this.dogNames.length);
+        return this.dogNames[randomIndex];
+    }
+}
+
 
 export default AudioController;
